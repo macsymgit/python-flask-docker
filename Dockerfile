@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.6.4-alpine3.6
 ENV FLASK_APP=appdocker
 COPY . /app
 WORKDIR /app
