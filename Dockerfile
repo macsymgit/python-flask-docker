@@ -1,8 +1,7 @@
 FROM python:3.6
-LABEL maintainer="lorenz.vanthillo@gmail.com"
+ENV FLASK_APP=appdocker
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-EXPOSE 8080
-ENTRYPOINT ["python"]
-CMD ["app/app.py"]
+EXPOSE 5000
+CMD [ "flask", "run", "--host=0.0.0.0" ]
